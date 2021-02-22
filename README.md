@@ -14,7 +14,7 @@ pythonbar 是基于 python 的常用功能示例合集。
 
 ### 主要目录
 
-- [抓取腾讯应用宝App信息并生成excel表记录导出](https://github.com/sanplit/pythonbar/appstore/)
+- [P1. 抓取腾讯应用宝App信息并生成excel表记录导出](./appstore/)
 
 ## 注意
 
