@@ -19,7 +19,8 @@ pythonbar 是基于 python 的常用功能示例合集。
 ## 注意
 
 本项目属于个人兴趣开发，开源出来是为了技术交流，请勿使用此项目用于其他违法用途。
-如有疑问或见解，欢迎[Issues](https://github.com/sanplit/pythonbar/issues)
+
+如有疑问或见解，欢迎 [Issues](https://github.com/sanplit/pythonbar/issues) .
 
 ## 鸣谢
 
