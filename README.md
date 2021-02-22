@@ -14,7 +14,7 @@ pythonbar 是基于 python 的常用功能示例合集。
 
 ### 主要目录
 
-- [抓取腾讯应用宝应用信息并生成excel表记录](https://github.com/sanplit/pythonbar/appstore/)
+- [抓取腾讯应用宝App信息并生成excel表记录导出](https://github.com/sanplit/pythonbar/appstore/)
 
 ## 注意
 
@@ -34,8 +34,8 @@ pythonbar 是基于 python 的常用功能示例合集。
 捐助方法如下：
 
 <div style="display: flex;justify-content: flex-start">
-<img width="300" height="350" src="https://images.cnblogs.com/cnblogs_com/sanplit/1934856/o_210222025809wxpay.png" />
-<img width="300" height="350" src="https://images.cnblogs.com/cnblogs_com/sanplit/1934856/o_210222025825alipay.png" />
+<img width="300" height="350" src="./static/imgs/wxpay2.png" />
+<img width="300" height="350" src="./static/imgs/alipay.png" />
 </div>
 
 ## 更新日志
