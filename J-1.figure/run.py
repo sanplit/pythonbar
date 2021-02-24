@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
 """
-@desc 抓取应用宝信息 顺便比较re、etree、BeautifulSoup
+@desc 抓个美女图吧 顺便比较re、etree、BeautifulSoup
 	  参考： https://blog.csdn.net/qq_39610888/article/details/81262193
 @author Sanplit
 """
