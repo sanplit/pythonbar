@@ -17,8 +17,6 @@ pythonbar 是基于 python 的常用功能示例合集。
 为了Ai情
 
 - [A-1. 抓取腾讯应用宝App信息并生成excel表记录导出](./A-1.appstore/)
-- [A-2. 抓取腾讯应用宝App信息并生成excel表记录导出](./A-1.appstore/)
-- [A-3. 抓取腾讯应用宝App信息并生成excel表记录导出](./A-1.appstore/)
 
 为了Ji情
 
