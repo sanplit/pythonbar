@@ -11,5 +11,4 @@
 - requests
 - xlrd（python读excel）
 - xlwt（python写excel）
-- datetime
 

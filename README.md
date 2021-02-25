@@ -14,15 +14,15 @@ pythonbar 是基于 python 的常用功能示例合集。
 
 ### 主要目录
 
-为了Ai情
+Type 1
 
 - [A-1. 抓取腾讯应用宝App信息并生成excel表记录导出](./A-1.appstore/)
 
-为了Ji情
+Type 2
 
-- [J-1. 长夜漫漫，寂寞难耐，是不是改看点什么](./J-1.figure/)
+- [D-1. 长夜漫漫，寂寞难耐，是不是改看点什么](./D-1.figure/)
 
-为了G情
+Type 3
 
 - [G-1. 正经事](./G-1.analysis/)
 
@@ -31,6 +31,8 @@ pythonbar 是基于 python 的常用功能示例合集。
 - ```UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 149: illegal multibyte sequence```
 
     其实print()函数的局限就是Python默认编码的局限，因为系统是win的，python的默认编码不是'utf-8',改一下python的默认编码成'utf-8'就行了,即修改```sys.stdout```
+
+- 缺少包，请执行```pip install xxx```,xxx代表所需的包名
 
 ## 注意
 
@@ -57,10 +59,9 @@ pythonbar 是基于 python 的常用功能示例合集。
 
 ## 更新日志
 
-2021-02-22
+2021-02-25
 
-- 创建项目
-- 更新 README
+- 添加抓取应用宝py
 
 ## 历史参考
 
