@@ -33,6 +33,7 @@ class Spider(object):
     def save_img(self, img_list, path = './imgs/'):
         self.create_dir(path)
         imgIndex = 1
+        print('------ Download Start ------- ')
         for img_url in img_list:
             header = {
                 'Accept': '*/*',
@@ -57,7 +58,7 @@ class Spider(object):
             except:
                 print('failed"')
 
-        print('------ over ------- Count: ',imgIndex-1)
+        print('------ Download Over ------- Count: ',imgIndex-1)
 
     def use_re(self, code):
         href_list = re.findall(r"<a class='galleryli_link' href='(.*?)'", code)
@@ -70,21 +71,23 @@ class Spider(object):
 
             title = re.findall(r'<h1 id="htilte">(.*?)</h1>', new_code2)[0]
 
-            # 这匹配的好像是30张cover图
             pattern = re.compile(r"<img src='(.*?)'", re.S)
-            img_list = re.findall(pattern, new_code2)
+            # 第一页图片
+            first_img = re.findall(pattern, new_code2)
 
-            # 拼接所有图名称
-            total_page = re.findall(r'>(\d)</a>', new_code2)
+            # 所有页 由于页数会变动，所有不准
+            pages = re.findall(r'>(\d)</a>', new_code2)
 
-            ilen = len(img_list)
-            for i in range(len(total_page)):
+            flen = len(first_img)
+            img_list = first_img
+            # for pi in range(1,len(pages)):
+            for pi in range(1,20):    # 抓取20页,从第二页开始
+                for ii in range(flen):
+                    name_str = str(flen*pi+ii) if flen*pi+ii >= 10 else '0'+str(flen*pi+ii)
+                    #将匹配到的数字替换成对应数,替换1个
+                    tmp = re.sub('/\d{3}.jpg', '/0'+name_str+'.jpg', first_img[1], 1)
+                    img_list.append(tmp)
 
-                #将匹配到的数字替换成对应数,替换1个  遍历次数要调整
-                tmp_img = re.sub('/\d{3}.jpg', '/0'+str(ilen*i)+'.jpg', img_list[1], 1)
-                tmp_img = re.sub('/\d{3}.jpg', '/0'+str(ilen*i+1)+'.jpg', img_list[1], 1)
-                tmp_img = re.sub('/\d{3}.jpg', '/0'+str(ilen*i+2)+'.jpg', img_list[1], 1)
-                
             self.save_img(img_list, './imgs/'+title+'/')
 
     def use_soup(self, code):
@@ -137,9 +140,9 @@ class Spider(object):
 
     def run(self):
         code = self.get_code(self.request_url+'/gallery/')  #确定抓取起始页
-        # self.use_soup(code)
+        self.use_soup(code)
         # self.use_xpath(code)
-        self.use_re(code)
+        # self.use_re(code)
 
 spider = Spider()
 spider.run()

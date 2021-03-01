@@ -27,7 +27,7 @@ Type 3
 - [G-1. 正经事](./G-1.analysis/)
 
 
-##常见问题
+## 常见问题
 - ```UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 149: illegal multibyte sequence```
 
     其实print()函数的局限就是Python默认编码的局限，因为系统是win的，python的默认编码不是'utf-8',改一下python的默认编码成'utf-8'就行了,即修改```sys.stdout```，参考[A-1](./A-1.appstore/)
