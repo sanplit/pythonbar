@@ -20,7 +20,7 @@ Type 1
 
 Type 2
 
-- [D-1. 多方式抓取美女福利图片到本地](./D-1.nvshens/)
+- [D-1. 三种方式抓取美女福利图片到本地](./D-1.nvshens/)
 
 Type 3
 
@@ -33,6 +33,7 @@ Type 3
     其实print()函数的局限就是Python默认编码的局限，因为系统是win的，python的默认编码不是'utf-8',改一下python的默认编码成'utf-8'就行了,即修改```sys.stdout```，参考[A-1](./A-1.appstore/)
 
 - 缺少包，请执行```pip install xxx```, xxx代表所需的包名
+- 任何需求都具有时效性，不管是操作对象还是版本的变动，请根据实际需要进行修改。
 
 ## 注意
 
@@ -56,4 +57,4 @@ Type 3
 <img width="300" height="300" src="./static/imgs/alipay.png" />
 </div>
 
-##### Over
+#### Over
