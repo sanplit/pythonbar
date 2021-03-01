@@ -9,16 +9,24 @@
 - xlwt （python写excel）
 
 ## 使用
-1. 修改```run.py```中的```app_list```值
-2. 参照格式改为自己所需的应用名称，然后进入当前目录下，命令执行```python run.py```
+1. 修改```run.py```中的```app_list```值，参照格式改为自己所需的应用名称；
+2. 然后进入当前目录下，命令执行```python run.py```
 
 ## 要点
 
-- 分析网页得知，该页是有js动态加载的数据，所以要想**抓取动态数据**，就要知道网页是如何加载数据的，这样的过程称为逆向工程。通过分析AJAX请求，来得到JSON等格式的数据，再使用Python的json等模块去解析为字典，最终获取到自己想要的数据。
+- 分析网页得知，该页是有**js动态加载**的数据，所以要想**抓取动态数据**，就要知道网页是如何加载数据的，这样的过程称为逆向工程。通过分析AJAX请求，来得到**JSON格式的数据**，再使用Python的json等模块去解析为字典，最终获取到自己想要的数据。
+
+##展示图
+|   搜索应用  |   应用详情  | 搜索所得json数据 |
+| --- | --- | --- |
+| <img width="300" height="300" src="../static/imgs/a-1-step1.png" /> | <img width="300" height="300" src="../static/imgs/a-1-step2.png" /> | <img width="300" height="300" src="../static/imgs/a-1-json.png" /> |
+
+最终结果
+![效果图](../static/imgs/a-1-result.png)
 
 ## 扩展
 
-- 第二种处理API接口数据方法，可以使用 ```json```
+- 第二种处理API接口数据方法，可以使用 ```json```包
 ```
   import json
   import urllib.request
@@ -38,3 +46,6 @@
 ```
 
 - 读取excel内容，加载包```xlrd```
+
+## 完成时间
+- 2021-02-25

@@ -9,7 +9,7 @@ pythonbar 是基于 python 的常用功能示例合集。
 
 ## 环境
 
-- Python (version >= 3.7)
+- Python 3.7
 - Mac/Linux/Windows
 
 ### 主要目录
@@ -20,7 +20,7 @@ Type 1
 
 Type 2
 
-- [D-1. 长夜漫漫，寂寞难耐，是不是改看点什么](./D-1.figure/)
+- [D-1. 多方式抓取美女福利图片到本地](./D-1.nvshens/)
 
 Type 3
 
@@ -30,9 +30,9 @@ Type 3
 ##常见问题
 - ```UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 149: illegal multibyte sequence```
 
-    其实print()函数的局限就是Python默认编码的局限，因为系统是win的，python的默认编码不是'utf-8',改一下python的默认编码成'utf-8'就行了,即修改```sys.stdout```
+    其实print()函数的局限就是Python默认编码的局限，因为系统是win的，python的默认编码不是'utf-8',改一下python的默认编码成'utf-8'就行了,即修改```sys.stdout```，参考[A-1](./A-1.appstore/)
 
-- 缺少包，请执行```pip install xxx```,xxx代表所需的包名
+- 缺少包，请执行```pip install xxx```, xxx代表所需的包名
 
 ## 注意
 
@@ -51,21 +51,9 @@ Type 3
 感谢您的支持！
 
 捐助方法如下：
-
 <div style="display: flex;justify-content: flex-start">
-<img width="300" height="350" src="./static/imgs/wxpay2.png" />
-<img width="300" height="350" src="./static/imgs/alipay.png" />
+<img width="300" height="300" src="./static/imgs/wxpay2.png" />
+<img width="300" height="300" src="./static/imgs/alipay.png" />
 </div>
 
-## 更新日志
-
-2021-02-25
-
-- 添加抓取应用宝py
-
-## 历史参考
-
-- [微信每日说](https://github.com/gengchen528/wechatBot/)
-- [AutomatePython](https://github.com/chenguohui/AutomatePython/)
-- [mypyworks](https://github.com/jayaston/mypyworks/)
-- [python list](https://github.com/sanplit/python/)
+##### Over

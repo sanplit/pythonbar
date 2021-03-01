@@ -12,7 +12,7 @@ import requests
 class Spider(object):
     def __init__(self):
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8') #改变标准输出的默认编码
-        self.app_list = ['qq','微信','虎牙直播']
+        self.app_list = ['qq','微信','抖音','QQ邮箱','虎牙直播']
         self.sj_url = 'https://sj.qq.com/myapp/searchAjax.htm?kw='
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
@@ -29,28 +29,38 @@ class Spider(object):
         worksheet = workbook.add_sheet(u'Subject Card',cell_overwrite_ok=True) 
 
         #设置表格样式 
-        style = xlwt.easyxf('font: name Arial Black, colour_index black, bold on; align: wrap on, vert centre, horiz center;border:left thin, right thin, top thin, bottom thin')
+        style = xlwt.easyxf('font:name Arial Black,colour_index black,bold on,height 180;align: wrap on, vert centre, horiz center;border:left thin, right thin, top thin, bottom thin') 
 
         #创建复杂表头 write_merge(x, x + m, y, y + n, string, sytle) 
         #x表示行，y表示列，m表示跨行个数，n表示跨列个数，string表示要写入的单元格内容，style表示单元格样式。 
         #其中，x, y, m, n，都是以0开始计算的。 
-        worksheet.write_merge(0,0,0,0,u'应用名称', style)
-        worksheet.write_merge(0,0,1,1,u'公司', style)
-        worksheet.write_merge(0,0,2,2,u'包名', style)
-        worksheet.write_merge(0,0,3,3,u'评分', style)
-        worksheet.write_merge(0,0,4,4,u'下载量', style)
-        worksheet.write_merge(0,0,5,5,u'下载链接', style)
+        worksheet.write_merge(2,3,2,2,u'应用名称', style)
+        worksheet.write_merge(2,3,3,3,u'公司', style)
+        worksheet.write_merge(2,3,4,4,u'包名', style)
+        worksheet.write_merge(2,3,5,5,u'评分', style)
+        worksheet.write_merge(2,3,6,6,u'下载量', style)
+        worksheet.write_merge(2,3,7,7,u'下载链接', style)
+
+        #设置列宽度 256为衡量单位，20表示20个字符宽度
+        worksheet.col(2).width=256*15
+        worksheet.col(3).width=256*30
+        worksheet.col(4).width=256*25
+        worksheet.col(5).width=256*8
+        worksheet.col(6).width=200*20
+        worksheet.col(7).width=200*50
 
         # 二维列表写入excel
         for index,item in enumerate(data):
             for i in range(0, len(item)):
                 # 参数对应 行, 列, 值
-                worksheet.write(1+index, i, item[i])
+                worksheet.write(4+index, 2+i, item[i])
 
         # 保存到当前目录
         workbook.save('appinfo.xls')
 
     def run(self):
+        print('******************* Wait a minute.It has begun. ****************************')
+
         # 有序列表
         res = list()
 
