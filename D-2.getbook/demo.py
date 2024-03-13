@@ -18,10 +18,10 @@ new_code = etree.HTML(html_data)
 #在xml中定位节点，返回的是一个列表
 info_list = new_code.xpath('//*[@id="list"]/div[3]/ul[2]/li/a/@href')
 
-for link in info_list:
+for index, link in info_list:
     tag1,tag2,tag3,tag4 = link.split('/', 3)
 
-    print(tag4)
+    print('第'+str(index + 1)+'篇: ', tag4)
 
     pageid,ext = tag4.split('.')
     link = 'https://www.kankan365.cc/files/article/html555/136/136583/'+str(pageid)+'.html'
@@ -35,8 +35,8 @@ for link in info_list:
     text = link_data.replace('<br><br>', '\n')
     text = text.replace('&nbsp;&nbsp;', '')
 
-    text = re.sub(r"茵右脚楞夺","的", text);
-    text = re.sub(r"顺困顶枯枵","是", text);
+    text = re.sub(r'茵右脚楞夺','的', text);
+    text = re.sub(r'顺困顶枯枵','是', text);
     text = re.sub(r'顶置中夺粗功肖功地','有', text);
     text = re.sub(r'夺回顾功带困','，', text);
 
